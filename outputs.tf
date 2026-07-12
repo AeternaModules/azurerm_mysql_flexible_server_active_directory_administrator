@@ -1,3 +1,7 @@
+output "mysql_flexible_server_active_directory_administrators_id" {
+  description = "Map of id values across all mysql_flexible_server_active_directory_administrators, keyed the same as var.mysql_flexible_server_active_directory_administrators"
+  value       = { for k, v in azurerm_mysql_flexible_server_active_directory_administrator.mysql_flexible_server_active_directory_administrators : k => v.id }
+}
 output "mysql_flexible_server_active_directory_administrators_identity_id" {
   description = "Map of identity_id values across all mysql_flexible_server_active_directory_administrators, keyed the same as var.mysql_flexible_server_active_directory_administrators"
   value       = { for k, v in azurerm_mysql_flexible_server_active_directory_administrator.mysql_flexible_server_active_directory_administrators : k => v.identity_id }
